@@ -2,7 +2,7 @@ import { motion, useReducedMotion, useScroll, useTransform } from "framer-motion
 import { useRef } from "react";
 import { Link } from "react-router-dom";
 import SplitText from "./SplitText";
-import { scrollToId, EASE } from "../lib/anim";
+import { EASE } from "../lib/anim";
 
 const Arrow = () => (
   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -43,7 +43,7 @@ export default function Hero({ ready }) {
         </motion.p>
         <motion.div className="hero-actions" variants={item} custom={0.7} initial="hidden" animate={ready ? "show" : "hidden"}>
           <Link className="btn btn-primary" to="/wine-tour">Book your tour <Arrow /></Link>
-          <button className="btn btn-ghost" onClick={() => scrollToId("experiences")}>Browse experiences</button>
+          <Link className="btn btn-ghost" to="/experiences">Browse experiences</Link>
           <span className="rating-chip"><span className="stars">★★★★★</span> 5.0 · 300+ Google reviews</span>
         </motion.div>
       </motion.div>

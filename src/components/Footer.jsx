@@ -12,19 +12,19 @@ export default function Footer() {
           <div>
             <h4>Experiences</h4>
             <ul>
+              <li><Link to="/experiences">All experiences</Link></li>
               <li><Link to="/wine-tour">E-Bike Wine Tour</Link></li>
-              <li><Link to="/wine-tour">Lake Vista Tour</Link></li>
-              <li><Link to="/wine-tour">Gold Panning</Link></li>
-              <li><Link to="/wine-tour">E-Bike Rentals</Link></li>
+              <li><Link to="/experiences">Lake Vista Tour</Link></li>
+              <li><Link to="/rentals">E-Bike Rentals</Link></li>
             </ul>
           </div>
           <div>
             <h4>Company</h4>
             <ul>
-              <li><a href="#eco">Sustainability</a></li>
-              <li><a href="#journal">Journal</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Gift cards</a></li>
+              <li><Link to="/sustainability">Sustainability</Link></li>
+              <li><Link to="/journal">Journal</Link></li>
+              <li><Link to="/contact">Contact</Link></li>
+              <li><Link to="/contact">Gift cards</Link></li>
             </ul>
           </div>
           <div>

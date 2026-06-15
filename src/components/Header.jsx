@@ -5,11 +5,12 @@ import { scrollToId, EASE } from "../lib/anim";
 import { lockScroll } from "../lib/useLenis";
 
 const NAV = [
-  { label: "Experiences", id: "experiences" },
+  { label: "Experiences", to: "/experiences" },
   { label: "Wine Tours", to: "/wine-tour" },
-  { label: "Rentals", id: "experiences" },
-  { label: "Sustainability", id: "eco" },
-  { label: "Journal", id: "journal" },
+  { label: "Rentals", to: "/rentals" },
+  { label: "Sustainability", to: "/sustainability" },
+  { label: "Journal", to: "/journal" },
+  { label: "Contact", to: "/contact" },
 ];
 
 const Arrow = () => (

@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Reveal from "./Reveal";
 import SplitText from "./SplitText";
 import CountUp from "./CountUp";
-import { scrollToId } from "../lib/anim";
 
 const Arrow = ({ s = 24 }) => (
   <svg viewBox="0 0 24 24" width={s} height={s} fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14M13 6l6 6-6 6" /></svg>
@@ -64,6 +63,9 @@ export function Experiences() {
             </Reveal>
           ))}
         </div>
+        <Reveal style={{ marginTop: "2rem" }}>
+          <Link className="btn btn-line" to="/experiences">View all experiences <Arrow s={18} /></Link>
+        </Reveal>
       </div>
     </section>
   );
@@ -114,6 +116,9 @@ export function Eco() {
             <Reveal className="eco-stat" key={i} delay={i * 0.1}><b>{s.b}</b><span>{s.s}</span></Reveal>
           ))}
         </div>
+        <Reveal style={{ marginTop: "2.5rem" }}>
+          <Link className="btn btn-light" to="/sustainability">Our eco promise <Arrow s={18} /></Link>
+        </Reveal>
       </div>
     </section>
   );
@@ -189,9 +194,9 @@ export function Gallery() {
         </Reveal>
         <Reveal className="gal">
           {GAL.map((g) => (
-            <button key={g.cls} className={g.cls} onClick={() => scrollToId("experiences")} aria-label={g.alt}>
+            <Link key={g.cls} to="/journal" className={g.cls} aria-label={g.alt}>
               <img src={img(g.src)} alt={g.alt} loading="lazy" />
-            </button>
+            </Link>
           ))}
         </Reveal>
       </div>
