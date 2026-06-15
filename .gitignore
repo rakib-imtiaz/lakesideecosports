@@ -1,0 +1,23 @@
+# ---- production = app/ only. Everything below stays local, never pushed. ----
+
+# dependencies / builds
+node_modules
+**/node_modules
+app/dist
+dist
+
+# dev + research artifacts (kept on disk, excluded from the repo)
+research/
+site/
+package.json
+package-lock.json
+
+# logs / env / editor / OS
+*.log
+.env
+.env.*
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+.vercel
